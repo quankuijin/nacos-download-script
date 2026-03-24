@@ -104,11 +104,11 @@ goto show_help
 
 :run_script
 if "%OUTPUT_DIR%"=="" (
-    echo 错误: 必须指定输出目录 -o 或 --output
+    echo [ERROR] 错误：必须指定输出目录 -o 或 --output
     goto show_help
 )
 if "%DATA_ID%"=="" (
-    echo 错误: 必须指定配置文件ID -d 或 --data-id
+    echo [ERROR] 错误：必须指定配置文件 ID -d 或 --data-id
     goto show_help
 )
 
@@ -197,3 +197,4 @@ echo.
 
 :end
 endlocal
+exit /b 0
